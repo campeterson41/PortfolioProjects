@@ -26,7 +26,7 @@ ORDER BY
 LIMIT 50;
 
 
--- Average number of suicides for each country as well as the percentage of population which that number represents
+-- Average number of suicides per decade for each country as well as the percentage of population which that number represents
 SELECT 
     country,
     CONCAT((FLOOR(year / 10) * 10), 's') AS decade,

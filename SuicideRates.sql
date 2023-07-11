@@ -1,5 +1,31 @@
 -- Analyzing Suicide Rates
 
+-- Top 50 countries with the highest suicide rates
+SELECT
+    country,
+    ROUND(AVG(per_100k_pop), 2) AS avg_suicide_rate
+FROM
+    SuicideRates
+GROUP BY
+    country
+ORDER BY
+    avg_suicide_rate DESC
+LIMIT 50;
+
+
+-- Bottom 50 countries with the lowest suicide rates
+SELECT
+    country,
+    ROUND(AVG(per_100k_pop), 2) AS avg_suicide_rate
+FROM
+    SuicideRates
+GROUP BY
+    country
+ORDER BY
+    avg_suicide_rate
+LIMIT 50;
+
+
 -- Average number of suicides for each country as well as the percentage of population which that number represents
 SELECT 
     country,

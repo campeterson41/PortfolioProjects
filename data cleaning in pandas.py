@@ -42,7 +42,6 @@ df[['Street_Address', 'State', 'Zipcode']] = df['Address'].str.split(',', 2, exp
 
 
 # standardize "Yes", "Y", "No", "N" 
-
 df['Paying Customer'] = df['Paying Customer'].str.replace('Yes', 'Y')
 df['Paying Customer'] = df['Paying Customer'].str.replace('No', 'N')
 df['Do_Not_Contact'] = df['Do_Not_Contact'].str.replace('Yes', 'Y')
